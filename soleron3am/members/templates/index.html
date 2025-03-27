@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Light gray background */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4a4a4a; /* Dark gray for the heading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+
+        li {
+            background: #ffffff; /* White background for list items */
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px; /* Slightly more rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            transition: background 0.3s, transform 0.3s; /* Added transform for hover effect */
+        }
+
+        li:hover {
+            background: #e0f7fa; /* Light cyan background on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Members</h1>
+
+<ul>
+{% for x in mymembers %}
+    <li>{{ x.firstname }} {{ x.lastname }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
